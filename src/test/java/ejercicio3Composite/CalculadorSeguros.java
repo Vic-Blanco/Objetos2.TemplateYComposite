@@ -18,4 +18,16 @@ public class CalculadorSeguros {
         PaqueteDeSeguros paquete1 = new PaqueteDeSeguros(seguros);
         assertEquals(3000,paquete1.calcularCosto());
     }
+    @Test
+    public void testCalcularSeguro2() {
+        Seguro seguro1 = new SeguroVida(1000);
+        Seguro seguro2 = new SeguroAuto(2000);
+        Seguro seguro3 = new SeguroVida(500);
+        List<Seguro> seguros = new ArrayList<>();
+        seguros.add(seguro1);
+        seguros.add(seguro2);
+        seguros.add(seguro3);
+        PaqueteDeSeguros paquete1 = new PaqueteDeSeguros(seguros);
+        assertEquals(3500,paquete1.calcularCosto());
+    }
 }

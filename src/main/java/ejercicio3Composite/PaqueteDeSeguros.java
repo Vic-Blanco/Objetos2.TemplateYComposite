@@ -4,10 +4,7 @@ import java.util.List;
 
 public class PaqueteDeSeguros  {
     List<Seguro> seguros;
-    /**
-     * Clase que representa un paquete de seguros, que puede contener múltiples seguros.
-     * Implementa la interfaz Seguro y calcula el costo total de todos los seguros en el paquete.
-     */
+
     public PaqueteDeSeguros(List<Seguro> seguros) {
         this.seguros = seguros;
     }

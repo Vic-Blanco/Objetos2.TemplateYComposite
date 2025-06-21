@@ -1,10 +1,10 @@
 package ejercicio5Template;
 
 public class RemeraNacional extends Remera {
-    private double recargo = 0.015; // 1.5% de recargo
+    private double recargo = 0.015; // 1.5% de recargo trasporte
     private double impuestoAduanero = 0; // 0% de impuesto aduanero
     private double bonificacion = 0.2; // 20% de bonificación
-    private double recargoPrecioFinal = 0.15; // 25% de recargo al precio final
+    private double recargoPrecioFinal = 0.15; // 15% de recargo al precio final
 
     public RemeraNacional (double precioUnitario) {
         super(precioUnitario);

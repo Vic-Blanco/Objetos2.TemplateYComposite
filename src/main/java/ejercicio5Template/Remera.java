@@ -8,9 +8,13 @@ public abstract class Remera  {
         this.precioUnitario = precioUnitario;
     }
 
-    public double calcularPrecioDeVenta(){
-        precioUnitario= precioUnitario + aplicarRecargo(precioUnitario) + impuestoAduanero(precioUnitario) + bonificacion(precioUnitario) + recargoPrecioFinal(precioUnitario);
-        return precioUnitario;
+    public double calcularPrecioDeVenta() {
+        double base = precioUnitario
+                + aplicarRecargo(precioUnitario)
+                + impuestoAduanero(precioUnitario)
+                - bonificacion(precioUnitario);
+
+        return base + recargoPrecioFinal(base);
     }
     public abstract double aplicarRecargo(double precioUnitario);
     public abstract double impuestoAduanero(double precioUnitario);

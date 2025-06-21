@@ -6,11 +6,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculadorTest {
     @Test
-    public void testCalularCostoRemera(){
-        var remeraImportada = new RemeraImportada(100);
-        var remeraNacional = new RemeraNacional(100);
+    void testRemeraImportada() {
+        Remera r = new RemeraImportada(1000);
+        double esperado = 1350.0;
+        assertEquals(esperado, r.calcularPrecioDeVenta(), 0.01);
+    }
 
-        assertEquals(133.0,remeraImportada.calcularPrecioDeVenta());
-        assertEquals(136.5,remeraNacional.calcularPrecioDeVenta());
+    @Test
+    void testRemeraNacional() {
+        Remera r = new RemeraNacional(1000);
+        double esperado = 937.25;
+        assertEquals(esperado, r.calcularPrecioDeVenta(), 0.01);
     }
 }
